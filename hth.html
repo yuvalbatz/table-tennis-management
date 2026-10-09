@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head to Head - Table Tennis Ranking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>🏓 Table Tennis</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="players.html" class="nav-link">Players</a></li>
+                <li><a href="hth.html" class="nav-link active">HTH</a></li>
+                <li><a href="competitions.html" class="nav-link">Competitions</a></li>
+                <li><a href="league.html" class="nav-link">League</a></li>
+                <li><button id="personalDetailsBtn" class="btn-personal">Personal Details</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Head to Head</h1>
+            </div>
+
+            <div class="hth-selector">
+                <div class="selector-group">
+                    <label for="playerA">Player A:</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="playerA" class="player-select" placeholder="Type to search player..." autocomplete="off">
+                        <div id="playerASuggestions" class="autocomplete-suggestions"></div>
+                    </div>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="selector-group">
+                    <label for="playerB">Player B:</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="playerB" class="player-select" placeholder="Type to search player..." autocomplete="off">
+                        <div id="playerBSuggestions" class="autocomplete-suggestions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hthResults" class="hth-results" style="display: none;">
+                <div class="hth-stats">
+                    <div class="stat-box">
+                        <h3>Total Matches</h3>
+                        <p id="totalMatches">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 id="playerAWinsLabel">Player A Wins</h3>
+                        <p id="playerAWins">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 id="playerBWinsLabel">Player B Wins</h3>
+                        <p id="playerBWins">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Last Match</h3>
+                        <p id="lastMatchResult">-</p>
+                    </div>
+                </div>
+
+                <div class="match-history">
+                    <h2>Match History</h2>
+                    <div id="matchHistoryTable" class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Competition</th>
+                                    <th>Players</th>
+                                    <th>Score</th>
+                                    <th>Winner</th>
+                                </tr>
+                            </thead>
+                            <tbody id="matchHistoryBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hthNoSelection" class="no-selection">
+                <p>Please select two players to view their head-to-head statistics.</p>
+                <div id="popularHTH" class="popular-hth">
+                    <h3>Popular Head-to-Head Matchups</h3>
+                    <div id="popularHTHList" class="popular-hth-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hth.js"></script>
+</body>
+</html>

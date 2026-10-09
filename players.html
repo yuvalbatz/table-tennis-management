@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - Table Tennis Ranking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>🏓 Table Tennis</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="players.html" class="nav-link active">Players</a></li>
+                <li><a href="hth.html" class="nav-link">HTH</a></li>
+                <li><a href="competitions.html" class="nav-link">Competitions</a></li>
+                <li><a href="league.html" class="nav-link">League</a></li>
+                <li><button id="personalDetailsBtn" class="btn-personal">Personal Details</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Players</h1>
+            </div>
+
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="categoryFilter">Filter by Category:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="S">Senior (S)</option>
+                        <option value="E21">Under 21 (E21)</option>
+                        <option value="J18">Junior 18 (J18)</option>
+                        <option value="M13">Mini 13 (M13)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="clubFilter">Filter by Club:</label>
+                    <select id="clubFilter" class="filter-select">
+                        <option value="all">All Clubs</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchInput">Search (Name, Club, Country):</label>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search players...">
+                </div>
+                <div class="filter-group">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="points-desc">Ranking Points (High to Low)</option>
+                        <option value="points-asc">Ranking Points (Low to High)</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner"></div>
+            <div id="playersTableContainer" class="players-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Club</th>
+                            <th>Ranking Points</th>
+                            <th>Category</th>
+                            <th>Country</th>
+                            <th>Flag</th>
+                        </tr>
+                    </thead>
+                    <tbody id="playersTableBody"></tbody>
+                </table>
+            </div>
+            <div id="noResults" class="no-results">
+                <p>No players found matching your criteria.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/players.js"></script>
+</body>
+</html>

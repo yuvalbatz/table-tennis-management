@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis Ranking & Competition Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>🏓 Table Tennis</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="players.html" class="nav-link">Players</a></li>
+                <li><a href="hth.html" class="nav-link">HTH</a></li>
+                <li><a href="competitions.html" class="nav-link">Competitions</a></li>
+                <li><a href="league.html" class="nav-link">League</a></li>
+                <li><button id="personalDetailsBtn" class="btn-personal">Personal Details</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Table Tennis Ranking System</h2>
+                <p>Manage players, view rankings, track competitions, and follow league standings</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Players</h3>
+                        <p>View and manage all players, their rankings, and categories</p>
+                        <a href="players.html" class="btn-primary">View Players</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚔️</div>
+                        <h3>Head to Head</h3>
+                        <p>Compare players and view their match history</p>
+                        <a href="hth.html" class="btn-primary">View HTH</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Competitions</h3>
+                        <p>Browse competitions and view match results</p>
+                        <a href="competitions.html" class="btn-primary">View Competitions</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>League</h3>
+                        <p>Check league standings and club rankings</p>
+                        <a href="league.html" class="btn-primary">View League</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 id="totalPlayers">-</h3>
+                        <p>Total Players</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalCompetitions">-</h3>
+                        <p>Competitions</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalClubs">-</h3>
+                        <p>Clubs</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalMatches">-</h3>
+                        <p>Matches Played</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
