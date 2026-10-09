@@ -223,9 +223,8 @@ The application uses **localStorage** for client-side data persistence:
 
 Created as part of an academic web programming course project.
 
-**Students:**
-- Student 1: Aviv Amidor - ID: 
-- Student 2: Yuval Batz - ID: 318530490
+**Student:** 
+- Student: Yuval Batz
 
 ---
 
